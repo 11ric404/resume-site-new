@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overdue - Ric Rebull</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
+</head>
+<body class="projects-page">
+    <div class="custom-cursor"></div>
+    <nav aria-label="Breadcrumb navigation">
+        <a href="projects.html" class="back-button" onclick="handleNavigation(event)">← Back</a>
+    </nav>
+    <main class="content">
+        <header class="project-header">
+            <h1>Overdue - iOS Task Management</h1>
+        </header>
+        <section class="project-content">
+            <div class="video-container">
+                <iframe 
+                    src="https://drive.google.com/file/d/1n7TpK3ApivAUzyxpxLIbfEvuWVi-90__/preview" 
+                    allow="autoplay"
+                    allowfullscreen
+                    title="Overdue iOS app demonstration video">
+                </iframe>
+            </div>
+            <div class="project-details">
+                <article class="info-box">
+                    <h2><i class="devicon-swift-plain colored" aria-hidden="true"></i> Project Overview</h2>
+                    <p>A modern iOS application built with SwiftUI that reimagines recurring task management, focusing on interval-based reminders rather than traditional deadlines.</p>
+                </article>
+
+                <article class="info-box">
+                    <h2><i class="devicon-apple-original" aria-hidden="true"></i> Technical Architecture</h2>
+                    <ul>
+                        <li>Modern SwiftUI with MVVM pattern</li>
+                        <li>Efficient state management (@State, @Binding)</li>
+                        <li>Clean architecture principles</li>
+                    </ul>
+                </article>
+
+                <article class="info-box">
+                    <h2>🎯 Key Features</h2>
+                    <ul>
+                        <li>Polished animations and transitions</li>
+                        <li>Dark mode optimization</li>
+                        <li>Complex interval calculations</li>
+                        <li>Persistent data management</li>
+                    </ul>
+                </article>
+
+                <article class="info-box">
+                    <h2>💡 Skills Demonstrated</h2>
+                    <div class="skills-grid">
+                        <span>SwiftUI</span>
+                        <span>iOS Development</span>
+                        <span>UI/UX Design</span>
+                        <span>Animation</span>
+                        <span>Clean Code</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 20 + 'px';
+            cursor.style.top = e.clientY - 20 + 'px';
+        });
+
+        function handleNavigation(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = e.target.href;
+            }, 500);
+        }
+
+        window.addEventListener('load', () => {
+            document.querySelector('.back-button').classList.add('fade-in');
+            document.querySelector('.project-details').classList.add('fade-in');
+        });
+    </script>
+</body>
+</html> 

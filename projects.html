@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ric Rebull</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="projects-page">
+    <div class="custom-cursor"></div>
+    <nav aria-label="Breadcrumb navigation">
+        <a href="index.html" class="back-button" onclick="handleNavigation(event)">← Back</a>
+    </nav>
+    <main class="content">
+        <header class="projects-header">
+            <h1>My Projects</h1>
+        </header>
+        <section class="projects-grid" aria-label="Project showcase">
+            <a href="overdue.html" class="info-box overdue-box" onclick="handleOverdueClick(event)" aria-label="View Overdue project details">
+                <img src="assets/ezgif-7e8f92c06f05d.gif" alt="Overdue project preview animation" class="overdue-gif">
+            </a>
+            <a href="jobcord.html" class="info-box jobcord-box" onclick="handleJobcordClick(event)" aria-label="View JobCord project details">
+                <img src="assets/JOB.png" alt="JobCord project logo" class="jobcord-img">
+            </a>
+            <a href="supernovasiege.html" class="info-box supernova-box" onclick="handleSupernovaClick(event)" aria-label="View Supernova Siege project details">
+                <img src="assets/SS.gif" alt="Supernova Siege game preview" class="supernova-img">
+            </a>
+        </section>
+    </main>
+
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 20 + 'px';
+            cursor.style.top = e.clientY - 20 + 'px';
+        });
+
+        function handleNavigation(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = e.target.href;
+            }, 500);
+        }
+
+        function handleOverdueClick(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = 'overdue.html';
+            }, 500);
+        }
+
+        function handleJobcordClick(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = 'jobcord.html';
+            }, 500);
+        }
+
+        function handleSupernovaClick(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = 'supernovasiege.html';
+            }, 500);
+        }
+
+        window.addEventListener('load', () => {
+            document.querySelector('.back-button').classList.add('fade-in');
+        });
+    </script>
+</body>
+</html> 

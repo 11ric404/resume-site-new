@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ric Rebull - Information Technology Student</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <main class="content">
+        <header class="hero-section">
+            <div class="hover-element title-container">
+                <img src="assets/title.png" alt="Ric Rebull - Information Technology Student" class="title-image">
+            </div>
+            <p class="hover-element">Information Technology Student at UCF</p>
+        </header>
+        <nav class="nav-buttons" aria-label="Main navigation">
+            <a href="about.html" class="nav-button hover-element" onclick="handleNavigation(event)">ABOUT</a>
+            <a href="projects.html" class="nav-button hover-element" onclick="handleNavigation(event)">PROJECTS</a>
+            <a href="contact.html" class="nav-button hover-element" onclick="handleNavigation(event)">CONTACT</a>
+        </nav>
+    </main>
+
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        const hoverElements = document.querySelectorAll('.hover-element');
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
+
+        if (!isTouchDevice) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX - 20 + 'px';
+                cursor.style.top = e.clientY - 20 + 'px';
+
+                const mouseX = (e.clientX / window.innerWidth) - 0.5;
+                const mouseY = (e.clientY / window.innerHeight) - 0.5;
+
+                hoverElements.forEach(element => {
+                    const movementStrength = element.tagName === 'IMG' ? 45 : 
+                                           element.tagName === 'P' ? 35 : 15;
+                    
+                    const translateX = mouseX * movementStrength;
+                    const translateY = mouseY * movementStrength;
+                    
+                    element.style.transform = `translate(${translateX}px, ${translateY}px)`;
+                });
+            });
+        }
+
+        function handleNavigation(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = e.target.href;
+            }, 500);
+        }
+    </script>
+</body>
+</html> 

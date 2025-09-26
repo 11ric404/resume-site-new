@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobCord - Ric Rebull</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
+</head>
+<body class="projects-page">
+    <div class="custom-cursor"></div>
+    <nav aria-label="Breadcrumb navigation">
+        <a href="projects.html" class="back-button" onclick="handleNavigation(event)">← Back</a>
+    </nav>
+    <main class="content">
+        <header class="project-header">
+            <h1>JobCord - Discord Job Search Bot</h1>
+        </header>
+        <section class="project-content">
+            <div class="project-details">
+                <article class="info-box">
+                    <h2><i class="devicon-nodejs-plain colored" aria-hidden="true"></i> Project Overview</h2>
+                    <p>A sophisticated Discord bot that automates job searching with real-time notifications, integrating job search APIs and providing personalized alerts for new opportunities.</p>
+                </article>
+
+                <article class="info-box">
+                    <h2><i class="devicon-python-plain colored" aria-hidden="true"></i> Technical Architecture</h2>
+                    <ul>
+                        <li>Built with Discord.js and Python</li>
+                        <li>Asynchronous programming patterns</li>
+                        <li>Multi-language system architecture</li>
+                        <li>Robust command handling system</li>
+                    </ul>
+                </article>
+
+                <article class="info-box">
+                    <h2>🎯 Key Features</h2>
+                    <ul>
+                        <li>Real-time job notifications</li>
+                        <li>User-specific alert preferences</li>
+                        <li>Multiple job search API integration</li>
+                        <li>Intelligent duplicate detection</li>
+                        <li>Comprehensive error handling</li>
+                    </ul>
+                </article>
+
+                <article class="info-box">
+                    <h2>💡 Skills Demonstrated</h2>
+                    <div class="skills-grid">
+                        <span>Node.js</span>
+                        <span>Python</span>
+                        <span>Discord.js</span>
+                        <span>API Integration</span>
+                        <span>Async Programming</span>
+                        <span>System Design</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 20 + 'px';
+            cursor.style.top = e.clientY - 20 + 'px';
+        });
+
+        function handleNavigation(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = e.target.href;
+            }, 500);
+        }
+
+        window.addEventListener('load', () => {
+            document.querySelector('.back-button').classList.add('fade-in');
+            document.querySelector('.project-details').classList.add('fade-in');
+        });
+    </script>
+</body>
+</html> 

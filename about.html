@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Ric Rebull</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="about-page">
+    <div class="custom-cursor"></div>
+    <nav aria-label="Breadcrumb navigation">
+        <a href="index.html" class="back-button" onclick="handleNavigation(event)">← Back</a>
+    </nav>
+    <main class="content">
+        <header class="about-header">
+            <h1>About Ric Rebull</h1>
+        </header>
+        <div class="about-container">
+            <img src="assets/picture.png" alt="Ric Rebull - Information Technology Student" class="profile-image">
+            <section class="about-content">
+                <div class="info-box empty">
+                    <img src="assets/picture.png" alt="Ric Rebull - Information Technology Student" class="mobile-profile-image">
+                </div>
+
+                <article class="info-box desktop-only">
+                    <h2>Academic Excellence</h2>
+                    <p>Currently pursuing a Bachelor of Science in Information Technology at UCF (Expected 05/2026) with a 3.78 GPA</p>
+                    <ul>
+                        <li>Dean's List: Fall 2022, Spring 2023, Spring 2024</li>
+                        <li>President's Honor Roll Certificate: Fall 2023</li>
+                    </ul>
+                </article>
+
+                <article class="info-box desktop-only">
+                    <h2>Technical Proficiency</h2>
+                    <ul>
+                        <li>Languages: SQL, Python, C, Java, JavaScript</li>
+                        <li>Development: Node.js, React, MySQL</li>
+                        <li>Tools: Git/GitHub, Docker, MySQL Workbench</li>
+                    </ul>
+                </article>
+
+                <article class="info-box desktop-only">
+                    <h2>Experience & Leadership</h2>
+                    <p>Web Development Chair & Founding Father at Beta Theta Pi - UCF</p>
+                    <ul>
+                        <li>Forage J.P. Morgan Software Engineering Virtual Experience</li>
+                        <li>IT Professional Shadowing Experience</li>
+                    </ul>
+                </article>
+
+                <article class="info-box mobile-only">
+                    <h2>Academic Excellence</h2>
+                    <p>Currently pursuing a Bachelor of Science in Information Technology at UCF (Expected 05/2026) with a 3.78 GPA</p>
+                    <ul>
+                        <li>Dean's List: Fall 2022, Spring 2023, Spring 2024</li>
+                        <li>President's Honor Roll Certificate: Fall 2023</li>
+                    </ul>
+                </article>
+
+                <article class="info-box mobile-only">
+                    <h2>Technical Proficiency</h2>
+                    <ul>
+                        <li>Languages: SQL, Python, C, Java, JavaScript</li>
+                        <li>Development: Node.js, React, MySQL</li>
+                        <li>Tools: Git/GitHub, Docker, MySQL Workbench</li>
+                    </ul>
+                </article>
+
+                <article class="info-box mobile-only">
+                    <h2>Experience & Leadership</h2>
+                    <p>Web Development Chair & Founding Father at Beta Theta Pi - UCF</p>
+                    <ul>
+                        <li>Forage J.P. Morgan Software Engineering Virtual Experience</li>
+                        <li>IT Professional Shadowing Experience</li>
+                    </ul>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 20 + 'px';
+            cursor.style.top = e.clientY - 20 + 'px';
+        });
+
+        function handleNavigation(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = e.target.href;
+            }, 500);
+        }
+
+        window.addEventListener('load', () => {
+            document.querySelector('.about-content').classList.add('fade-in');
+            document.querySelector('.profile-image').classList.add('fade-in');
+            document.querySelector('.back-button').classList.add('fade-in');
+        });
+    </script>
+</body>
+</html> 
