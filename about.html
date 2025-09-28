@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Ric Rebull's academic achievements, technical skills, and professional experience as an Information Technology student at UCF.">
     <title>About - Ric Rebull</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="about-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="custom-cursor"></div>
     <nav aria-label="Breadcrumb navigation">
         <a href="index.html" class="back-button" onclick="handleNavigation(event)">← Back</a>
     </nav>
-    <main class="content">
+    <main class="content" id="main-content">
         <header class="about-header">
             <h1>About Ric Rebull</h1>
         </header>
         <div class="about-container">
-            <img src="assets/picture.png" alt="Ric Rebull - Information Technology Student" class="profile-image">
+            <img src="picture.png" alt="Ric Rebull - Information Technology Student" class="profile-image">
             <section class="about-content">
                 <div class="info-box empty">
-                    <img src="assets/picture.png" alt="Ric Rebull - Information Technology Student" class="mobile-profile-image">
+                    <img src="picture.png" alt="Ric Rebull - Information Technology Student" class="mobile-profile-image">
                 </div>
 
                 <article class="info-box desktop-only">
@@ -79,6 +81,9 @@
             </section>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2024 Ric Rebull. All rights reserved.</p>
+    </footer>
 
     <script>
         const cursor = document.querySelector('.custom-cursor');

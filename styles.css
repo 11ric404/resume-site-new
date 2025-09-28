@@ -171,7 +171,7 @@ body::before {
     left: -15%;
     width: 130%;
     height: 130%;
-    background-image: url('assets/output (4).jpg?v=1');
+    background-image: url('output (4).jpg?v=1');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -188,7 +188,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0;
-    background-image: url('assets/output (4).jpg?v=1');
+    background-image: url('output (4).jpg?v=1');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -616,6 +616,45 @@ p {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Footer styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    text-align: right;
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.3);
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    border-radius: 6px 0 0 0;
+}
+
+footer p {
+    margin: 0;
+    font-style: normal;
 }
 
 /* Semantic HTML5 element styles */

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Supernova Siege - Arcade Shooter Game by Ric Rebull. A space-themed Python game featuring wave-based progression, power-ups, and dynamic cosmic events.">
     <title>Supernova Siege - Ric Rebull</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -220,11 +221,12 @@
     </style>
 </head>
 <body class="projects-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="custom-cursor"></div>
     <nav aria-label="Breadcrumb navigation">
         <a href="projects.html" class="back-button" onclick="handleNavigation(event)">← Back</a>
     </nav>
-    <main class="content">
+    <main class="content" id="main-content">
         <header class="project-header">
             <h1>Supernova Siege - Arcade Shooter</h1>
         </header>
@@ -232,16 +234,16 @@
             <div class="left-column">
                 <div class="slideshow-container" role="img" aria-label="Supernova Siege game screenshots">
                     <div class="slides">
-                        <img src="assets/supernova1.jpg" alt="Supernova Siege Gameplay">
+                        <img src="supernova1.jpg" alt="Supernova Siege Gameplay">
                     </div>
                     <div class="slides">
-                        <img src="assets/supernova2.png" alt="Supernova Siege Black Hole">
+                        <img src="supernova2.png" alt="Supernova Siege Black Hole">
                     </div>
                     <div class="slides">
-                        <img src="assets/supernova3.png" alt="Supernova Siege Gameplay">
+                        <img src="supernova3.png" alt="Supernova Siege Gameplay">
                     </div>
                     <div class="slides">
-                        <img src="assets/supernova4.jpg" alt="Supernova Siege Game Over">
+                        <img src="supernova4.jpg" alt="Supernova Siege Game Over">
                     </div>
                     
                     <button class="prev" onclick="plusSlides(-1)" style="left: 0;" aria-label="Previous image">&#10094;</button>
@@ -301,6 +303,9 @@
             </div>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Ric Rebull. All rights reserved.</p>
+    </footer>
 
     <script>
         const cursor = document.querySelector('.custom-cursor');

@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Ric Rebull's portfolio of innovative projects including iOS app development, Discord bots, and game development showcasing technical expertise.">
     <title>Projects - Ric Rebull</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="projects-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="custom-cursor"></div>
     <nav aria-label="Breadcrumb navigation">
         <a href="index.html" class="back-button" onclick="handleNavigation(event)">← Back</a>
     </nav>
-    <main class="content">
+    <main class="content" id="main-content">
         <header class="projects-header">
             <h1>My Projects</h1>
         </header>
         <section class="projects-grid" aria-label="Project showcase">
             <a href="overdue.html" class="info-box overdue-box" onclick="handleOverdueClick(event)" aria-label="View Overdue project details">
-                <img src="assets/ezgif-7e8f92c06f05d.gif" alt="Overdue project preview animation" class="overdue-gif">
+                <img src="ezgif-7e8f92c06f05d.gif" alt="Overdue project preview animation" class="overdue-gif">
             </a>
             <a href="jobcord.html" class="info-box jobcord-box" onclick="handleJobcordClick(event)" aria-label="View JobCord project details">
-                <img src="assets/JOB.png" alt="JobCord project logo" class="jobcord-img">
+                <img src="JOB.png" alt="JobCord project logo" class="jobcord-img">
             </a>
             <a href="supernovasiege.html" class="info-box supernova-box" onclick="handleSupernovaClick(event)" aria-label="View Supernova Siege project details">
-                <img src="assets/SS.gif" alt="Supernova Siege game preview" class="supernova-img">
+                <img src="SS.gif" alt="Supernova Siege game preview" class="supernova-img">
             </a>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Ric Rebull. All rights reserved.</p>
+    </footer>
 
     <script>
         const cursor = document.querySelector('.custom-cursor');
